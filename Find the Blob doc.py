@@ -95,19 +95,30 @@ def findColorSpot(picture, color):
 # 4-YELLOW
 
 ######################Code Starts Here##################################
-pic = takePicture()
-pic1 = takePicture()
-pixel = getPixel(pic, 255, 175)
-r = getRed(pixel)
-g = getGreen(pixe1)
-b = getBlue(pixe1) 
-show(pic)
-while findColorSpot(pic, 1) == 0:      #if it does not find red
-    rotate(1,1)
+def FindBlob(color):
     pic = takePicture()
-forward(1,3)
-rotate(1,.5)
-while r<100:
-    pic1 = takePicture()
-    show(pic1)
+    show(pic)
+    pixel = getPixel(pic, 250, 150)
+    r = getRed(pixel)
+    g = getGreen(pixel)
+    b = getBlue(pixel)
+    while findColorSpot(pic, color) == 0:      #if it does not find red
+        rotate(1,1)
+        pic = takePicture()
+    forward(3,1)
+    rotate(1,.5)
+    while findColorSpot(pic, color) == 1:      #if color lines up in middle
+        rotate(1,1)
+        pic = takePicture()
+        show(pic)
+    forward(3,1)
+##     while r<100:
+##         pic = takePicture()
+##         pixel = getPixel(pic, 250, 150)
+##         r = getRed(pixel)
+##         g = getGreen(pixel)
+##         b = getBlue(pixel)
+##         show(pic)
+##         forward(1,1)
+FindBlob(2)
       
