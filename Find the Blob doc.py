@@ -111,7 +111,7 @@ def FindBlob(color):
         rotate(1,1)
         pic = takePicture()
         show(pic)
-    forward(3,1)
+    forward(3,.75)
 ##     while r<100:
 ##         pic = takePicture()
 ##         pixel = getPixel(pic, 250, 150)
@@ -120,5 +120,4 @@ def FindBlob(color):
 ##         b = getBlue(pixel)
 ##         show(pic)
 ##         forward(1,1)
-FindBlob(2)
-      
+FindBlob(1)
