@@ -95,12 +95,19 @@ def findColorSpot(picture, color):
 # 4-YELLOW
 
 ######################Code Starts Here##################################
-pic = takePicture() 
+pic = takePicture()
+pic1 = takePicture()
+pixel = getPixel(pic, 255, 175)
+r = getRed(pixel)
+g = getGreen(pixe1)
+b = getBlue(pixe1) 
 show(pic)
 while findColorSpot(pic, 1) == 0:      #if it does not find red
     rotate(1,1)
-    pic = takePicture() 
-while no red in center
-    rotate(1,0.5)
-    forward(1,0.5)
     pic = takePicture()
+forward(1,3)
+rotate(1,.5)
+while r<100:
+    pic1 = takePicture()
+    show(pic1)
+      
