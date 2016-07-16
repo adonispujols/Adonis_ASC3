@@ -3,10 +3,10 @@ from random import *
 a = randint(1, 4)   #helps decide random outcome
 print (a)
 user_input = []
-##User's input affects the "fate" stat, changing the type of outcome their recieve
-# 0= neutral
-# 1= good
-# -1= bad 
+##User's input affects the "fate" stat, changing the type of outcome they recieve
+# 0= neutral outcome
+# 1= good outcome
+# -1= bad outcome
 fate = 0
 ## Introduction (not essential)
 name = input("Welcome to the 100% Legit and Scam-Free Gaurenteed Fortune Telling Software (trial version) Please enter your name now")
