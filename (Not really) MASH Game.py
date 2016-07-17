@@ -23,21 +23,27 @@ good_mate = ["this year's Miss America", "the hottest model in the world", "anyo
 bad_offspring = ["a mutant","the Devil","a monster","nothing"]
 good_offspring = ["so many children that you could literally make your own country", "the smartest kid in the world", "Dat Boi", "Karate Kid"]
 ##Lists of replies that trigger a change to "fate" variable (As of now only changes fate to -1)
-trigger_for_color = ["Red","Blue","Yellow","Green","Purple","Orange"]
-trigger_for_food = ["Pizza","Chicken","Sushi","Steak","Fish","Apple","Orange","Candy"]
-trigger_for_number = ["1","2","3","4","5","6","7","8","9","10","100",]
+bad_trigger_for_color = ["Red","Blue","Yellow"]
+good_trigger_for_color = ["Green","Purple","Orange"]
+bad_trigger_for_food = ["Pizza","Chicken","Sushi","Steak"]
+good_trigger_for_food = ["Fish","Apple","Orange","Candy"]
+bad_trigger_for_number = ["1","2","3","4","5"]
+good_trigger_for_number = ["6","7","8","9","10","100",]
 ##Checks input against "trigger" lists. Any matches will turn "fate" to -1.
-for i in range(len(trigger_for_color)):
-    if trigger_for_color[i] == color:
-        fate = -1
-for i in range(len(trigger_for_food)):
-    if trigger_for_food[i] == food:
-        fate = -1
-for i in range(len(trigger_for_number)):
-    if trigger_for_number[i] == number:
-        fate= -1
+if color in bad_trigger_for_color:
+    fate = fate - 1
+elif color in good_trigger_for_color:
+    fate = fate + 1
+if food in bad_trigger_for_food:
+    fate = fate - 1
+elif food in good_trigger_for_food:
+    fate = fate + 1    
+if number in bad_trigger_for_number:
+    fate = fate - 1
+elif number in good_trigger_for_number:
+    fate = fate + 1    
 ##Uses fate value to determine which set (bad or good) of outcomes to randomly generate.
-if fate == 0 or fate == 1:
+if fate>0:
     print ("You will live in "+choice(good_building)+", working as "+choice(good_job)+". You will marry "+choice(good_mate)+", and give birth to "+choice(good_offspring)+".")
-if fate == -1:
+if fate<0:
     print ("You will live in "+choice(bad_building)+", working as "+choice(bad_job)+". You will marry "+choice(bad_mate)+", and give birth to "+choice(bad_offspring)+".")
