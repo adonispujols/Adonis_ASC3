@@ -15,7 +15,11 @@ for pixel in getPixels(pic):
     b=getBlue(pixel)
     gray=(r+g+b)/3
     if gray>180:
-        setRGB(pixel, ObamaYellow)
-    if gray>120:
-        setRGB(pixel, ObamaBlue)
-
+        setColor(pixel, ObamaYellow)
+    elif gray>140:
+        setColor(pixel, ObamaBlue)
+    elif gray>80:
+      setColor(pixel, ObamaRed)
+    else:
+      setColor(pixel, darkblue)
+show(pic)
