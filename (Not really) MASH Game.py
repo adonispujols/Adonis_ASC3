@@ -1,7 +1,5 @@
 ##Gives a random set of "future outcomes" that's affected by the user's input
 from random import *
-a = randint(1, 4)   #helps decide random outcome
-user_input = []
 ##User's input affects the "fate" stat, changing the type of outcome they recieve
 # 0= neutral outcome
 # 1= good outcome
@@ -10,9 +8,7 @@ fate = 0
 ## Introduction (not essential)
 name = input("Welcome to the 100% Legit and Scam-Free Gaurenteed Fortune Telling Software (trial version) Please enter your name now")
 creditcard = input("Hello "+name+" Unfortuantely there is no trial version and you must pay now. Enter your credit card number")
-user_input.append(name)
-user_input.append(creditcard)
-print("Thank you for your information! You now have the full version of Fortune Teller! Now, I am not your usual fortune teller. Say anything that I particularly do not like and your fortune may be adversely affected...")
+print("Thank you for your information, "+name+"! You now have the full version of Fortune Teller! Now, I am not your usual fortune teller. Say anything that I particularly do not like and your fortune may be adversely affected...")
 ##Gathering user input
 color = input("What's your favorite color?")
 food = input("Favorite Food?")
@@ -39,18 +35,9 @@ for i in range(len(trigger_for_food)):
         fate = -1
 for i in range(len(trigger_for_number)):
     if trigger_for_number[i] == number:
-        fate = -1
-##Chooses random element from lists of possible outcomes
-rbb = randrange(len(bad_building))
-rgb = randrange(len(good_building))
-rbj = randrange(len(bad_job))
-rgj = randrange(len(good_job))
-rbm = randrange(len(bad_mate))
-rgm = randrange(len(good_mate))
-rbo = randrange(len(bad_offspring))
-rgo = randrange(len(good_offspring))
+        fate= -1
 ##Uses fate value to determine which set (bad or good) of outcomes to randomly generate.
 if fate == 0 or fate == 1:
-    print ("You will live in "+good_building[rgb]+", working as "+good_job[rgj]+". You will marry "+good_mate[rgm]+", and give birth to "+good_offspring[rgo]+".")
+    print ("You will live in "+choice(good_building)+", working as "+choice(good_job)+". You will marry "+choice(good_mate)+", and give birth to "+choice(good_offspring)+".")
 if fate == -1:
-    print ("You will live in "+bad_building[rbb]+", working as "+bad_job[rbj]+". You will marry "+bad_mate[rbm]+", and give birth to "+bad_offspring[rbo]+".")
+    print ("You will live in "+choice(bad_building)+", working as "+choice(bad_job)+". You will marry "+choice(bad_mate)+", and give birth to "+choice(bad_offspring)+".")
