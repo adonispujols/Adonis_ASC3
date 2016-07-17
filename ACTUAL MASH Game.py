@@ -1,3 +1,4 @@
+##An actual MASH (or as actual as I can get it). Just follow the prompts and have fun!)
 ## from random import *
 ## a = randint(1, 4)
 ## print (a)
