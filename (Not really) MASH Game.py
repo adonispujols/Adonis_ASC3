@@ -1,7 +1,6 @@
 ##Gives a random set of "future outcomes" that's affected by the user's input
 from random import *
 a = randint(1, 4)   #helps decide random outcome
-print (a)
 user_input = []
 ##User's input affects the "fate" stat, changing the type of outcome they recieve
 # 0= neutral outcome
@@ -32,15 +31,12 @@ trigger_for_color = ["Red","Blue","Yellow","Green","Purple","Orange"]
 trigger_for_food = ["Pizza","Chicken","Sushi","Steak","Fish","Apple","Orange","Candy"]
 trigger_for_number = ["1","2","3","4","5","6","7","8","9","10","100",]
 ##Checks input against "trigger" lists. Any matches will turn "fate" to -1.
-for i in range(len(trigger_for_color)):
-    if trigger_for_color[i] == color:
-        fate = -1
-for i in range(len(trigger_for_food)):
-    if trigger_for_food[i] == food:
-        fate = -1
-for i in range(len(trigger_for_number)):
-    if trigger_for_number[i] == number:
-        fate = -1
+if color in trigger_for_color:
+    fate = -1
+if food in trigger_for_food:
+    fate = -1
+if number in trigger_for_number:
+    fate = -1
  ##Uses fate value to determine which set (bad or good) of outcomes to randomly generate.
 if fate == -1:
     print ("You will live in"+bad_building[a-1]+bad_job[0]+bad_mate[0]+bad_offspring[0])
