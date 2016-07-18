@@ -10,10 +10,7 @@ pic = makePicture(pickAFile())
 ##Changes each pixel to a color defined above based off of gray value
 #Grayvalue is a measure of how "dark/light" the pixel is
 for pixel in getPixels(pic):
-    r=getRed(pixel)
-    g=getGreen(pixel)
-    b=getBlue(pixel)
-    gray=(r+g+b)/3
+    gray=getGray(pixel)
     if gray>180:
         setColor(pixel, ObamaYellow)
     elif gray>140:
