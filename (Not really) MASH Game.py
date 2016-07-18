@@ -35,17 +35,17 @@ bad_trigger_for_number = ["1","2","3","4","5"]
 good_trigger_for_number = ["6","7","8","9","10","100",]
 ##Checks input against "trigger" lists. Any matches will cause fate to change
 if color in bad_trigger_for_color:
-    fate = fate - 1
+    fate -= 1
 elif color in good_trigger_for_color:
-    fate = fate + 1
+    fate += 1
 if food in bad_trigger_for_food:
-    fate = fate - 1
+    fate -= 1
 elif food in good_trigger_for_food:
-    fate = fate + 1    
+    fate += 1    
 if number in bad_trigger_for_number:
-    fate = fate - 1
+    fate -= 1
 elif number in good_trigger_for_number:
-    fate = fate + 1    
+    fate += 1    
 ##Uses fate value to determine which set (bad or good) of outcomes to randomly generate.
 if fate==0:
     print ("Your future seems bland and simple. You will live in "+choice(neutral_building)+", working as "+choice(neutral_job)+". You will marry "+choice(neutral_mate)+", and give birth to "+choice(neutral_offspring)+".")
