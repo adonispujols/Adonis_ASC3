@@ -17,5 +17,5 @@ while num<10:
         pass
     else:
         used_titles.append(title)
-        num = num+ 1
+        num += 1
         print(str(num)+". "+title)      

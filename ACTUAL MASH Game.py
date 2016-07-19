@@ -23,7 +23,7 @@ while t<4:            #Number of kids
     except ValueError:
         print("That's not an integer!")
     else:
-        t = t + 1
+        t += 1
         kids_list.append(kids)
         processing_list.append(kids)
 for i in range(4):         #List of cars
@@ -41,7 +41,7 @@ while t==4:                #Random number to generate MASH
         if randnum==0:       #Making sure input is not 0, or it defeats the purpose of the game!
             print("That number is not usable!")
         else:
-            t = t + 1          #will end loop
+            t += 1          #will end loop
 start_index = 0                 #where the script starts "counting" just like in real life
 while len(processing_list)>0:
     ##This removes one item from the list in traditional MASH style, without fear of overflow/code breaking due to high numbers     
