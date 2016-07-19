@@ -1,4 +1,5 @@
 #USE FOR LOOPS INSTEAD OF TONS OF TESTS!!
+#Our own ms-paint app that uses 8 clickable sqaures that change the color of our strokes
 draw_color = color(0,0,0)
 r = 0
 g = 0
@@ -11,6 +12,7 @@ def draw():
     global r
     global g
     global b
+    ## the eight squares
     noStroke()
     fill(255,0,0)
     rect(0,0,50,50)
@@ -28,6 +30,7 @@ def draw():
     rect(300,0,50,50)
     fill(0,0,0)
     rect(350,0,50,50)
+    ##making them clicakable/changing colors
     if mouseButton == LEFT:
         if mouseY<50:    
             if 0 < mouseX < 50:
@@ -45,10 +48,10 @@ def draw():
             elif 300 < mouseX < 350:
                 draw_color = color(255,255,255)
             elif 350 < mouseX < 400:
-                draw_color = color(0,0,0)
+                draw_color = color(0,0,0)  
         else:
-            noStroke()
+            noStroke()                #drawing the stroke
             fill(draw_color)
             ellipse(mouseX,mouseY,5,5)
-#REPLACE IFS WITH FOR LOOPS
+#REPLACE IFS WITH FOR LOOPS! ADD RAINBOW GRADIENT/ COLORING!
                 
