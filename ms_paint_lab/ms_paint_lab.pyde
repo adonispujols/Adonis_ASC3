@@ -1,5 +1,6 @@
 #USE FOR LOOPS INSTEAD OF TONS OF TESTS!!
 #Our own ms-paint app that uses 8 clickable sqaures that change the color of our strokes
+#USE COLORMODE()
 draw_color = color(0,0,0)
 r = 0
 g = 0
@@ -54,4 +55,5 @@ def draw():
             fill(draw_color)
             ellipse(mouseX,mouseY,5,5)
 #REPLACE IFS WITH FOR LOOPS! ADD RAINBOW GRADIENT/ COLORING!
+#use COLoRMODE()
                 
