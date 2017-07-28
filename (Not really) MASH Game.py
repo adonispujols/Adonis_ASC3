@@ -26,7 +26,7 @@ good_mate = ["this year's Miss America", "the hottest model in the world", "anyo
 neutral_offspring = ["a couple of brats","simple children","smart, but silly kids","one child"]
 bad_offspring = ["a mutant","the Devil","a monster","nothing"]
 good_offspring = ["so many children that you could literally make your own country", "the smartest kid in the world", "Dat Boi", "Karate Kid"]
-##Lists of replies that trigger a change to "fate" variable (As of now only changes fate to -1)
+##Lists of replies that trigger a change to "fate" variable
 bad_trigger_for_color = ["Red","Blue","Yellow"]
 good_trigger_for_color = ["Green","Purple","Orange"]
 bad_trigger_for_food = ["Pizza","Chicken","Sushi","Steak"]
